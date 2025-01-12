@@ -14,9 +14,7 @@ export default function Portfolio() {
         <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce>
           <h2 className="section-title mx-auto mb-8 lg:mb-16">作品集</h2>
         </Fade>
-        <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce>
-          <PortfolioTabs />
-        </Fade>
+        <PortfolioTabs />
       </div>
     </section>
   );
