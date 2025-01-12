@@ -7,7 +7,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "preview": "serve ./out",
-    "lighthouse": "unlighthouse --site localhost:3000",
+    "lighthouse": "unlighthouse --site echo-photography.onrender.com",
     "lint": "next lint",
     "format": "prettier . --write"
   },
