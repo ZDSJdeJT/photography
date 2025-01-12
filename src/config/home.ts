@@ -1,15 +1,15 @@
+import { Bird, Scan, Smile } from 'lucide-react';
 import {
-  RiBookmark3Fill,
   RiBodyScanFill,
-  RiServiceFill,
+  RiBookmark3Fill,
   RiCamera2Fill,
-  RiGalleryFill,
-  RiEditCircleFill,
-  RiPlug2Fill,
   RiCamera3Fill,
   RiCameraFill,
+  RiEditCircleFill,
+  RiGalleryFill,
+  RiPlug2Fill,
+  RiServiceFill,
 } from 'react-icons/ri';
-import { Smile, Scan, Bird } from 'lucide-react';
 
 import projectImage1 from '@/assets/pages/home/gallery/1.png';
 import projectImage2 from '@/assets/pages/home/gallery/2.png';

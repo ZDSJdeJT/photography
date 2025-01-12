@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Project } from '@/components/pages/home/project';
-import { projectCategories } from '@/config/portfolio';
 import { projects } from '@/config/home';
+import { projectCategories } from '@/config/portfolio';
 
 const PortfolioTabs = () => {
   const [currentCategory, setCurrentCategory] = useState(projectCategories[0]);

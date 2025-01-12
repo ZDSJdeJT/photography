@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { RiMenFill } from 'react-icons/ri';
 import { Fade } from 'react-awesome-reveal';
+import { RiMenFill } from 'react-icons/ri';
 
 import { Button } from '@/components/ui/button';
 import { articles } from '@/config/home';

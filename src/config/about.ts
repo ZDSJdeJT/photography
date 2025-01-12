@@ -1,10 +1,10 @@
 import {
-  RiUserHeartFill,
+  RiRidingFill,
   RiSendPlane2Fill,
+  RiStarHalfSFill,
+  RiUserHeartFill,
   RiVidicon2Fill,
   RiVipCrown2Fill,
-  RiStarHalfSFill,
-  RiRidingFill,
 } from 'react-icons/ri';
 
 export const info = [

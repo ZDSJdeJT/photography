@@ -1,9 +1,9 @@
-import { type StaticImport } from 'next/dist/shared/lib/get-img-props';
+import type { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Image from 'next/image';
-import { Link2Icon, Group } from 'lucide-react';
+import { Group, Link2Icon } from 'lucide-react';
 
-import { Card, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Card, CardHeader } from '@/components/ui/card';
 import { LinkButton } from '@/components/pages/home/link-button';
 
 const Project = (props: {

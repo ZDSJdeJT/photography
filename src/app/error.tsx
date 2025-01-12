@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 
-import { ErrorCard } from '@/components/error-card';
 import { Button } from '@/components/ui/button';
+import { ErrorCard } from '@/components/error-card';
 
 export default function Error({
   error,

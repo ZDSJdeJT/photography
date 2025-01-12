@@ -1,9 +1,9 @@
 import {
   RiBilibiliFill,
+  RiDoubanFill,
+  RiTiktokFill,
   RiWeiboFill,
   RiZhihuFill,
-  RiTiktokFill,
-  RiDoubanFill,
 } from 'react-icons/ri';
 
 export const socials = [

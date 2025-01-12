@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Fade } from 'react-awesome-reveal';
 
+import profile from '@/assets/pages/about/profile.png';
 import { HeroImage } from '@/components/pages/hero-image';
 import { info } from '@/config/about';
-import profile from '@/assets/pages/about/profile.png';
 
 export const metadata: Metadata = {
   title: '关于',

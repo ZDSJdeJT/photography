@@ -1,5 +1,5 @@
-import tailwindcssMotion from 'tailwindcss-motion';
 import tailwindcssAnimate from 'tailwindcss-animate';
+import tailwindcssMotion from 'tailwindcss-motion';
 
 /** @type {import('tailwindcss').Config} */
 export default {

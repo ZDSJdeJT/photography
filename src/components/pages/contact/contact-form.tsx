@@ -1,16 +1,15 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { toast } from 'sonner';
 import {
-  UserCheck,
-  Paperclip,
-  MessageCircle,
   ArrowRightIcon,
+  MessageCircle,
+  Paperclip,
+  UserCheck,
 } from 'lucide-react';
 import { Fade } from 'react-awesome-reveal';
+import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
+import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -24,6 +23,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 const formSchema = z.object({
   name: z.string().min(1, {

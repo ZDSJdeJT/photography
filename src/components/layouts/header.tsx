@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useThrottleFn } from 'ahooks';
 
-import { cn } from '@/lib/utils';
 import { Logo } from '@/components/layouts/logo';
+import { MobileNav } from '@/components/layouts/mobile-nav';
 import { Nav } from '@/components/layouts/nav';
 import { ThemeToggle } from '@/components/layouts/theme-toggle';
-import { MobileNav } from '@/components/layouts/mobile-nav';
+import { cn } from '@/lib/utils';
 
 const Header = () => {
   const [header, setHeader] = useState(false);

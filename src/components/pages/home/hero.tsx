@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import { RiMenFill } from 'react-icons/ri';
 import { Fade } from 'react-awesome-reveal';
+import { RiMenFill } from 'react-icons/ri';
 
-import { SparklesText } from '@/components/magic-ui/sparkles-text';
-import { Button } from '@/components/ui/button';
-import { Socials } from '@/components/layouts/socials';
-import { Mark } from '@/components/pages/home/mark';
-import { HeroImage } from '@/components/pages/hero-image';
-import { marks } from '@/config/home';
 import photography from '@/assets/pages/home/hero/photography.svg';
+import { Button } from '@/components/ui/button';
+import { SparklesText } from '@/components/magic-ui/sparkles-text';
+import { Socials } from '@/components/layouts/socials';
+import { HeroImage } from '@/components/pages/hero-image';
+import { Mark } from '@/components/pages/home/mark';
+import { marks } from '@/config/home';
 
 const Hero = () => {
   return (

@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import { Noto_Sans, Noto_Sans_Mono } from 'next/font/google';
 
-import '@/styles/globals.css';
-import { cn } from '@/lib/utils';
-import { ThemeProvider } from '@/components/providers/theme-provider';
-import { Header } from '@/components/layouts/header';
-import { Footer } from '@/components/layouts/footer';
-import { ScrollProgress } from '@/components/layouts/scroll-progress';
 import { Toaster } from '@/components/ui/sonner';
 import { AutoDetectUpdateDialog } from '@/components/auto-detect-update-dialog';
+import { Footer } from '@/components/layouts/footer';
+import { Header } from '@/components/layouts/header';
+import { ScrollProgress } from '@/components/layouts/scroll-progress';
+import { ThemeProvider } from '@/components/providers/theme-provider';
+import { cn } from '@/lib/utils';
+
+import '@/styles/globals.css';
 
 const notoSans = Noto_Sans({
   variable: '--font-noto-sans',

@@ -6,9 +6,9 @@ import { Fade } from 'react-awesome-reveal';
 
 import {
   Card,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
 } from '@/components/ui/card';
 import {
   Carousel,

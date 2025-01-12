@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { RiCheckFill } from 'react-icons/ri';
 import { Fade } from 'react-awesome-reveal';
+import { RiCheckFill } from 'react-icons/ri';
 
 import { PurchaseButton } from '@/components/pages/pricing/purchase-button';
 import { includedFeatures } from '@/config/pricing';
