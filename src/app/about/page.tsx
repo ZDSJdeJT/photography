@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Fade } from 'react-awesome-reveal';
 
 import profile from '@/assets/pages/about/profile.png';
-import { HeroImage } from '@/components/pages/hero-image';
+import { HeroImage } from '@/components//hero-image';
 import { info } from '@/config/about';
 
 export const metadata: Metadata = {

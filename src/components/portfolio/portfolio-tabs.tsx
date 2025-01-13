@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Project } from '@/components/pages/home/project';
+import { Project } from '@/components//home/project';
 import { projects } from '@/config/home';
 import { projectCategories } from '@/config/portfolio';
 

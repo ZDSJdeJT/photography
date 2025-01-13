@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Fade } from 'react-awesome-reveal';
 
-import { PortfolioTabs } from '@/components/pages/portfolio/portfolio-tabs';
+import { PortfolioTabs } from '@/components//portfolio/portfolio-tabs';
 
 export const metadata: Metadata = {
   title: '作品集',

@@ -4,7 +4,7 @@ import { Group, Link2Icon } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardHeader } from '@/components/ui/card';
-import { LinkButton } from '@/components/pages/home/link-button';
+import { LinkButton } from '@/components//home/link-button';
 
 const Project = (props: {
   image: StaticImport;
