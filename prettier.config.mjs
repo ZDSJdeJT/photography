@@ -16,7 +16,7 @@ export default {
     '^@/components/ui/(.*)$',
     '^@/components/(.*)-ui/(.*)$',
     '^@/components/(.*)$',
-    '^[@/]',
+    '^@/',
   ],
   plugins: [
     'prettier-plugin-tailwindcss',
