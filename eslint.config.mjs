@@ -2,6 +2,7 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import progress from 'eslint-plugin-file-progress';
 import reactCompiler from 'eslint-plugin-react-compiler';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -22,6 +23,7 @@ const eslintConfig = [
       'react-compiler/react-compiler': 'error',
     },
   },
+  progress.configs.recommended,
 ];
 
 export default eslintConfig;

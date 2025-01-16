@@ -122,6 +122,9 @@ importers:
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.14.0(jiti@2.4.0))
+      eslint-plugin-file-progress:
+        specifier: ^3.0.1
+        version: 3.0.1(eslint@9.14.0(jiti@2.4.0))
       eslint-plugin-react-compiler:
         specifier: 19.0.0-beta-63e3235-20250105
         version: 19.0.0-beta-63e3235-20250105(eslint@9.14.0(jiti@2.4.0))
@@ -3517,6 +3520,15 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
+  eslint-plugin-file-progress@3.0.1:
+    resolution:
+      {
+        integrity: sha512-sPUOIifutW3Ehhmujt40IU5ytXL6HnuGVev2n9cp4d5fzVOoQp1K17DJ/I+cRdctmTpMcYit/fOuF9efjmD98A==,
+      }
+    engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
+    peerDependencies:
+      eslint: ^9.0.0
+
   eslint-plugin-import@2.31.0:
     resolution:
       {
@@ -5211,6 +5223,12 @@ packages:
       }
     engines: { node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1 }
     hasBin: true
+
+  nanospinner@1.2.2:
+    resolution:
+      {
+        integrity: sha512-Zt/AmG6qRU3e+WnzGGLuMCEAO/dAu45stNbHY223tUxldaDAeE+FxSPsd9Q+j+paejmm0ZbrNVs5Sraqy3dRxA==,
+      }
 
   natural-compare@1.4.0:
     resolution:
@@ -9658,6 +9676,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  eslint-plugin-file-progress@3.0.1(eslint@9.14.0(jiti@2.4.0)):
+    dependencies:
+      eslint: 9.14.0(jiti@2.4.0)
+      nanospinner: 1.2.2
+      picocolors: 1.1.1
+
   eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.14.0(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.3)(eslint@9.14.0(jiti@2.4.0)):
     dependencies:
       '@rtsao/scc': 1.1.0
@@ -10742,6 +10766,10 @@ snapshots:
       thenify-all: 1.6.0
 
   nanoid@3.3.7: {}
+
+  nanospinner@1.2.2:
+    dependencies:
+      picocolors: 1.1.1
 
   natural-compare@1.4.0: {}
 
