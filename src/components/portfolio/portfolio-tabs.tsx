@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useQueryState } from 'nuqs';
 import { Fade } from 'react-awesome-reveal';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -9,7 +9,13 @@ import { projects } from '@/config/home';
 import { projectCategories } from '@/config/portfolio';
 
 const PortfolioTabs = () => {
-  const [currentCategory, setCurrentCategory] = useState(projectCategories[0]);
+  const [category, setCategory] = useQueryState('category');
+  const currentCategory = (() => {
+    if (!category || !projectCategories.includes(category)) {
+      return projectCategories[0];
+    }
+    return category;
+  })();
   const filteredProject =
     currentCategory === projectCategories[0]
       ? projects
@@ -24,7 +30,7 @@ const PortfolioTabs = () => {
               key={index}
               value={category}
               onClick={() => {
-                setCurrentCategory(category);
+                setCategory(category);
               }}
               className="w-[162px] md:w-auto"
             >

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useInterval } from 'usehooks-ts';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -14,20 +15,20 @@ import {
 } from '@/components/ui/dialog';
 import { NOTIFY_AFTER_TIMESTAMP_KEY } from '@/constants';
 
-let cache: string | undefined;
+const cache = new Map<string, string>();
 
 const shouldUpdate = async (): Promise<boolean> => {
-  const resp = await fetch(
-    `${location.origin}${location.pathname}?timestamp=${Date.now()}`,
-  );
+  const url = `${location.origin}${location.pathname}`;
+  const resp = await fetch(`${url}?timestamp=${Date.now()}`);
   const html = await resp.text();
-  if (cache) {
-    if (html === cache) {
+  const temp = cache.get(url);
+  if (temp) {
+    if (html === temp) {
       return false;
     }
     return true;
   }
-  cache = html;
+  cache.set(url, html);
   return false;
 };
 
@@ -53,17 +54,14 @@ const AutoDetectUpdateDialog = () => {
 
   useEffect(() => {
     detect(notify);
-    const interval = setInterval(
-      () => {
-        detect(notify);
-      },
-      1000 * 60 * 5 /* 5 分钟 */,
-    );
-
-    return () => {
-      clearInterval(interval);
-    };
   }, []);
+
+  useInterval(
+    () => {
+      detect(notify);
+    },
+    isDialogOpen ? null : 1000 * 60 * 5 /* 5 分钟 */,
+  );
 
   return (
     <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
