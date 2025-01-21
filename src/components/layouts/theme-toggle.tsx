@@ -21,7 +21,7 @@ const ThemeToggle = () => {
 
   if (!isMounted()) {
     return (
-      <Button variant="outline" size="icon">
+      <Button variant="outline" size="icon" disabled>
         <Spinner />
       </Button>
     );
