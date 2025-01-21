@@ -1,8 +1,8 @@
 'use client';
 
-import { Moon, Sun } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Loader2, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { useIsMounted } from 'usehooks-ts';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -12,18 +12,22 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Spinner } from '@/components/ui/spinner';
 
 const ThemeToggle = () => {
-  const isMounted = useIsMounted();
+  const [mounted, setMounted] = useState(false);
 
   const { theme, setTheme } = useTheme();
 
-  if (!isMounted()) {
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
     return (
       <Button variant="outline" size="icon" disabled>
-        <Spinner />
-        <span className="sr-only">切换主题</span>
+        <Loader2 className="animate-spin h-[1.2rem] w-[1.2rem]" />
+        <span className="sr-only">加载中</span>
       </Button>
     );
   }
