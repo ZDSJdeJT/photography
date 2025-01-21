@@ -23,6 +23,7 @@ const ThemeToggle = () => {
     return (
       <Button variant="outline" size="icon" disabled>
         <Spinner />
+        <span className="sr-only">切换主题</span>
       </Button>
     );
   }
