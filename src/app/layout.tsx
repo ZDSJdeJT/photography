@@ -46,7 +46,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
             {props.children}
             <Footer />
             <ScrollProgress />
-            <Toaster richColors />
+            <Toaster richColors className="pointer-events-auto" />
             <AutoDetectUpdateDialog />
           </NuqsAdapter>
         </ThemeProvider>
