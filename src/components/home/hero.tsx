@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Fade } from 'react-awesome-reveal';
 import { RiMenFill } from 'react-icons/ri';
 
-import photography from '@/assets/pages/home/hero/photography.svg';
+import photography from '@/assets/home/hero/photography.svg';
 import { Button } from '@/components/ui/button';
 import { SparklesText } from '@/components/magic-ui/sparkles-text';
 import { HeroImage } from '@/components//hero-image';

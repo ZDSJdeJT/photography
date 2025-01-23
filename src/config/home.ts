@@ -11,23 +11,23 @@ import {
   RiServiceFill,
 } from 'react-icons/ri';
 
-import projectImage1 from '@/assets/pages/home/gallery/1.png';
-import projectImage2 from '@/assets/pages/home/gallery/2.png';
-import projectImage3 from '@/assets/pages/home/gallery/3.png';
-import projectImage4 from '@/assets/pages/home/gallery/4.png';
-import projectImage5 from '@/assets/pages/home/gallery/5.png';
-import projectImage6 from '@/assets/pages/home/gallery/6.png';
-import projectImage7 from '@/assets/pages/home/gallery/7.png';
-import projectImage8 from '@/assets/pages/home/gallery/8.png';
-import projectImage9 from '@/assets/pages/home/gallery/9.png';
-import projectImage10 from '@/assets/pages/home/gallery/10.png';
-import projectImage11 from '@/assets/pages/home/gallery/11.png';
-import reviewImage1 from '@/assets/pages/home/reviews/1.png';
-import reviewImage2 from '@/assets/pages/home/reviews/2.png';
-import reviewImage3 from '@/assets/pages/home/reviews/3.png';
-import reviewImage4 from '@/assets/pages/home/reviews/4.png';
-import reviewImage5 from '@/assets/pages/home/reviews/5.png';
-import reviewImage6 from '@/assets/pages/home/reviews/6.png';
+import projectImage1 from '@/assets/home/gallery/1.png';
+import projectImage2 from '@/assets/home/gallery/2.png';
+import projectImage3 from '@/assets/home/gallery/3.png';
+import projectImage4 from '@/assets/home/gallery/4.png';
+import projectImage5 from '@/assets/home/gallery/5.png';
+import projectImage6 from '@/assets/home/gallery/6.png';
+import projectImage7 from '@/assets/home/gallery/7.png';
+import projectImage8 from '@/assets/home/gallery/8.png';
+import projectImage9 from '@/assets/home/gallery/9.png';
+import projectImage10 from '@/assets/home/gallery/10.png';
+import projectImage11 from '@/assets/home/gallery/11.png';
+import reviewImage1 from '@/assets/home/reviews/1.png';
+import reviewImage2 from '@/assets/home/reviews/2.png';
+import reviewImage3 from '@/assets/home/reviews/3.png';
+import reviewImage4 from '@/assets/home/reviews/4.png';
+import reviewImage5 from '@/assets/home/reviews/5.png';
+import reviewImage6 from '@/assets/home/reviews/6.png';
 
 export const marks = [
   {
