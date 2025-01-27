@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Fade } from 'react-awesome-reveal';
 
-import { ContactForm } from '@/components//contact/contact-form';
+import { ContactForm } from '@/components/contact/contact-form';
 
 export const metadata: Metadata = {
   title: '联系',

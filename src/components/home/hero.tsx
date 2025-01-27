@@ -5,8 +5,8 @@ import { RiMenFill } from 'react-icons/ri';
 import photography from '@/assets/home/hero/photography.svg';
 import { Button } from '@/components/ui/button';
 import { SparklesText } from '@/components/magic-ui/sparkles-text';
-import { HeroImage } from '@/components//hero-image';
-import { Mark } from '@/components//home/mark';
+import { HeroImage } from '@/components/hero-image';
+import { Mark } from '@/components/home/mark';
 import { Socials } from '@/components/layouts/socials';
 import { marks } from '@/config/home';
 

@@ -1,6 +1,6 @@
 import { Fade } from 'react-awesome-reveal';
 
-import { Project } from '@/components//home/project';
+import { Project } from '@/components/home/project';
 import { projects } from '@/config/home';
 
 const Gallery = () => {

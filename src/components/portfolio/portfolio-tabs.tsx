@@ -4,22 +4,28 @@ import { useQueryState } from 'nuqs';
 import { Fade } from 'react-awesome-reveal';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Project } from '@/components//home/project';
+import { Project } from '@/components/home/project';
 import { projects } from '@/config/home';
 import { projectCategories } from '@/config/portfolio';
 
+const defaultCategory = projectCategories[0];
+
+const filteredProjects = new Map([[defaultCategory, projects]]);
+projects.forEach((project) => {
+  filteredProjects.set(project.category, [
+    ...(filteredProjects.get(project.category) ?? []),
+    project,
+  ]);
+});
+
 const PortfolioTabs = () => {
-  const [category, setCategory] = useQueryState('category');
-  const currentCategory = (() => {
-    if (!category || !projectCategories.includes(category)) {
-      return projectCategories[0];
-    }
-    return category;
-  })();
-  const filteredProject =
-    currentCategory === projectCategories[0]
-      ? projects
-      : projects.filter((project) => project.category === currentCategory);
+  const [category, setCategory] = useQueryState('category', {
+    defaultValue: defaultCategory,
+    clearOnDefault: true,
+  });
+  const currentCategory = projectCategories.includes(category)
+    ? category
+    : defaultCategory;
 
   return (
     <Tabs defaultValue={currentCategory} className="mb-24 lg:mb-48">
@@ -39,15 +45,17 @@ const PortfolioTabs = () => {
           ))}
         </Fade>
       </TabsList>
-      <div className="grid grid-cols-1 gap-4 text-lg lg:mt-8 lg:grid-cols-3">
-        <Fade direction="up" delay={800} cascade damping={1e-1} triggerOnce>
-          {filteredProject.map((project, index) => (
-            <TabsContent key={index} value={currentCategory}>
-              <Project {...project} />
-            </TabsContent>
-          ))}
-        </Fade>
-      </div>
+      <Fade direction="up" delay={800} cascade damping={1e-1} triggerOnce>
+        {projectCategories.map((category, index) => (
+          <TabsContent key={index} value={category}>
+            <div className="grid grid-cols-1 gap-4 text-lg lg:mt-8 lg:grid-cols-3">
+              {filteredProjects.get(category)!.map((project, idx) => (
+                <Project key={idx} {...project} />
+              ))}
+            </div>
+          </TabsContent>
+        ))}
+      </Fade>
     </Tabs>
   );
 };
