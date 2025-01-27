@@ -45,17 +45,17 @@ const PortfolioTabs = () => {
           ))}
         </Fade>
       </TabsList>
-      <Fade direction="up" delay={800} cascade damping={1e-1} triggerOnce>
-        {projectCategories.map((category, index) => (
-          <TabsContent key={index} value={category}>
-            <div className="grid grid-cols-1 gap-4 text-lg lg:mt-8 lg:grid-cols-3">
+      {projectCategories.map((category, index) => (
+        <TabsContent key={index} value={category}>
+          <div className="grid grid-cols-1 gap-4 text-lg lg:mt-8 lg:grid-cols-3">
+            <Fade direction="up" delay={800} cascade damping={1e-1} triggerOnce>
               {filteredProjects.get(category)!.map((project, idx) => (
                 <Project key={idx} {...project} />
               ))}
-            </div>
-          </TabsContent>
-        ))}
-      </Fade>
+            </Fade>
+          </div>
+        </TabsContent>
+      ))}
     </Tabs>
   );
 };
