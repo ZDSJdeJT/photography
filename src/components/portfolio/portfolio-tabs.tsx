@@ -6,7 +6,11 @@ import { Fade } from 'react-awesome-reveal';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Project } from '@/components/home/project';
 import { projects } from '@/config/home';
-import { projectCategories } from '@/config/portfolio';
+
+const projectCategories = [
+  '全部',
+  ...new Set(projects.map((project) => project.category)),
+];
 
 const defaultCategory = projectCategories[0];
 
