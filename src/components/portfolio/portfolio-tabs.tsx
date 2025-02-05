@@ -26,13 +26,11 @@ const PortfolioTabs = () => {
   const [category, setCategory] = useQueryState('category', {
     defaultValue: defaultCategory,
     clearOnDefault: true,
+    parse: (val) => (projectCategories.includes(val) ? val : null),
   });
-  const currentCategory = projectCategories.includes(category)
-    ? category
-    : defaultCategory;
 
   return (
-    <Tabs defaultValue={currentCategory} className="mb-24 lg:mb-48">
+    <Tabs defaultValue={category} className="mb-24 lg:mb-48">
       <TabsList className="mx-auto mb-12 grid h-full w-full dark:border-none md:grid-cols-4 md:border lg:max-w-[740px]">
         <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce>
           {projectCategories.map((category, index) => (
