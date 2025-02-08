@@ -49,7 +49,7 @@ const Reviews = () => {
                             width={70}
                             height={70}
                             alt={review.name}
-                            priority
+                            loading="eager"
                             className="mb-2"
                           />
                           <div className="flex flex-col">

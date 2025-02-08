@@ -3,7 +3,6 @@ import { Noto_Sans, Noto_Sans_Mono } from 'next/font/google';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 
 import { Toaster } from '@/components/ui/sonner';
-import { AutoDetectUpdateDialog } from '@/components/auto-detect-update-dialog';
 import { Footer } from '@/components/layouts/footer';
 import { Header } from '@/components/layouts/header';
 import { ScrollProgress } from '@/components/layouts/scroll-progress';
@@ -47,7 +46,6 @@ export default function RootLayout(props: { children: React.ReactNode }) {
             <Footer />
             <ScrollProgress />
             <Toaster richColors className="pointer-events-auto" />
-            <AutoDetectUpdateDialog />
           </NuqsAdapter>
         </ThemeProvider>
       </body>
