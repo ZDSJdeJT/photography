@@ -12,6 +12,12 @@ const Confetti = () => {
       spread: randomInRange(50, 70),
       particleCount: randomInRange(50, 100),
       origin: { y: 0.6 },
+      colors: ['primary', 'secondary', 'muted', 'accent', 'destructive'].map(
+        (item) =>
+          getComputedStyle(document.documentElement).getPropertyValue(
+            `--${item}`,
+          ),
+      ),
     });
   }, []);
 
